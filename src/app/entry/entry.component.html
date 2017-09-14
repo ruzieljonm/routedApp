@@ -2,43 +2,35 @@
    <div class ="form-group">
     <label for ="fname"> Student Number </label>
       <input type="text"
-            id="studNo"
-            name="studNo"
+            id="num"
+            name="num"
             ngModel
             class="form-control">
   </div>
   <div class ="form-group">
-    <label for ="fname"> Student Number </label>
-      <input type="text"
-            id="studNo"
-            name="studNo"
-            ngModel
-            class="form-control">
-  </div>
-  
-  <div class ="form-group">
-    <label for ="fname"> First name </label>
+    <label for ="fname"> Student First Name </label>
       <input type="text"
             id="fname"
             name="fname"
             ngModel
             class="form-control">
   </div>
-
-<div class ="form-group">
-  <label for ="lname"> last name </label>
-    <input type="text"
+  
+  <div class ="form-group">
+    <label for ="fname"> Student Last Name </label>
+      <input type="text"
             id="lname"
             name="lname"
             ngModel
             class="form-control">
-</div>
+  </div>
+
 
 <div class ="form-group">
     <label for ="fname"> Student Program </label>
       <input type="text"
-            id="studProg"
-            name="studProg"
+            id="prog"
+            name="prog"
             ngModel
             class="form-control">
 </div>
@@ -46,12 +38,35 @@
 <div class ="form-group">
     <label for ="fname"> StudentYear </label>
       <input type="text"
-            id="studYr"
-            name="studYr"
+            id="yr"
+            name="yr"
             ngModel
             class="form-control">
 </div>
 
 
-<button class="btn btn-primary">
-</button>
+<button>Submit</button>
+
+<!-- 
+<h3>Enter Student Entry</h3>
+
+<form (ngSubmit)="onSubmit(nameForm)" #nameForm="ngForm">
+
+<label>Student Number: </label>
+<input type="text" id="num" name="num" ngModel><br>
+
+<label>First Name: </label>
+<input type="text" id="fname" name="fname" ngModel><br>
+
+<label>Last Name: </label>
+<input type="text" id="lname" name="lname" ngModel><br>
+
+<label>Program: </label>
+<input type="text" id="prog" name="prog" ngModel><br>
+
+<label>Year: </label>
+<input type="text" id="yr" name="yr" ngModel><br><br>
+
+<button>Submit</button>
+
+</form> -->

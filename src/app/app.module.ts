@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from "@angular/router";
-import { FormsModule } from'@angular/forms';
-
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { EntryComponent } from './entry/entry.component';
 import { DisplayComponent } from './display/display.component';
-import {SharedService } from './shared.service';
-const appRoutes: Routes = [
-  {path: 'datainput', component: EntryComponent},
-  {path: 'dataoutput', component: DisplayComponent}
+import { SharedService } from './shared.service';
+
+const navRoutes: Routes = [
+  {path: 'entry', component: EntryComponent},
+  {path: 'display', component: DisplayComponent}
 ]
 
 @NgModule({
@@ -20,12 +20,12 @@ const appRoutes: Routes = [
     DisplayComponent
   ],
   imports: [
-   
-BrowserModule,
-RouterModule.forRoot(appRoutes),
-FormsModule
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(navRoutes)
+
   ],
   providers: [SharedService],
-bootstrap:[AppComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SharedService} from '../shared.service';
-
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-entry',
@@ -15,7 +14,7 @@ export class EntryComponent implements OnInit {
   }
 
   onSubmit(nameForm){
-    this.dataStore.addNewName(nameForm.value.fname,  nameForm.value.lname, nameForm.value.studNo,nameForm.value.studProg, nameForm.value.studYr)
+    this.dataStore.addNewStud(nameForm.value.num, nameForm.value.fname, nameForm.value.lname, nameForm.value.prog, nameForm.value.yr)
     nameForm.reset();
   }
 

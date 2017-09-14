@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-display',
@@ -6,20 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
+  studColl: Array<object>;
 
-  firstName: string;
-  lastName: string;
-  studNo: string;
-  studProg: string;
-  studYr: string;
+  constructor(private dataStore: SharedService) { }
 
-nameCollection: Array <object> = [];
-constructor (private dataStore: SharedService){}
-
-ngOnInit() {
-this.firstName = this.dataStore.shFirstName;
-this.lastName = this.dataStore.shLastName;
-this.nameCollection = this.dataStore.getNames();
-}
+  ngOnInit() {
+    this.studColl = this.dataStore.getStud();
+  }
 
 }
